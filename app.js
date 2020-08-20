@@ -4,7 +4,7 @@ fetch('http://localhost:3000/api/v1/questions').then((response) => {
 }).then(data => {
     console.log(data.data);
     const questions = data.data.map(question => {
-        return `<p>Question ${question.title}</p>`
+        return `<p>${question.title}</p>`
     }).join("");
     document.querySelector('#app').insertAdjacentHTML('afterbegin', questions); 
 }).catch((err) => {
@@ -17,6 +17,9 @@ fetch('http://localhost:3000/api/v1/answers').then((response) => {
     return response.json();
 }).then(data => {
     console.log(data.data);
+    const answers = data.data.map(answer => {
+        return `<p>${answer.response}</p>`
+    }).join("");
 }).catch((err) => {
     console.log('rejected', err);
 });
