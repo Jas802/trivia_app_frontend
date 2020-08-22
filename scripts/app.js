@@ -1,6 +1,3 @@
-let questions = []
-let answers = []
-
 
 fetch('http://localhost:3000/api/v1/questions').then((response) => { //gets question index from API
     console.log('resolved', response);
@@ -30,30 +27,3 @@ fetch('http://localhost:3000/api/v1/answers').then((response) => { //gets answer
 }).catch((err) => {
     console.log('rejected', err);
 });
-
-function buildQuiz() {
-    const output = [];
-
-    questions.forEach(
-        (currentQuestion, questionNumber) => {
-        const answers = [];
-        for(response in currentQuestion.answers){
-            answers.push(
-                `<label>
-                 <input type="radio" name="question${questionNumber}" value=${response}>
-                 ${response} :
-                 ${currentQuestion.answers[response]}
-                <label>`
-            );
-        }
-        output.push(
-        `<div class="slide">
-            <div class="quesion"> ${currentQuestion.title} </div>
-            <div class="answers"> ${answers.join('')} </div>
-         </div>`
-
-        );
-    });
-    quizContainer.innerHTML = output.join('');
-};
-buildQuiz();
