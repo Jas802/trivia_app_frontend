@@ -7,34 +7,19 @@
     <title>Star Wars Trivia</title>
 </head>
 <body>
-    <div class="container">
-        <div id="game" class="justify-center flex-column">
-            <h2 id="question">Answer The Following Question</h2>
-            <div class="choice-container">
-                <p class="choice-prefix">A</p>
-                <p class="choice-text">Choice 1</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">B</p>
-                <p class="choice-text">Choice 2</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">C</p>
-                <p class="choice-text">Choice 3</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">D</p>
-                <p class="choice-text">Choice 4</p>
-            </div>
-        </div>
-    </div>
-    <!-- <button id="next">Next Question</button> -->
+    <form class="signup-form">
+        <input type="text" id="username" placeholder="Enter Your Name">
+        <input type="submit" value="submit">
+        <div class="feedback"></div>
+    </form>
+    <div id="quiz"></div>
     <button id="submit">Submit Answers</button>
     <div id="results"></div>
 
 
     <script src="scripts/question.js"></script>
     <script src="scripts/answer.js"></script>
+    <script src="scripts/user.js"></script>
     <script src="scripts/quiz.js"></script>
     <script src="scripts/app.js"></script>
 </body>

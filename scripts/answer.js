@@ -4,3 +4,4 @@ class Answer {
         this.question_id = question_id;
     }
 }
+

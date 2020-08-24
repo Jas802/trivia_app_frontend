@@ -1,7 +1,18 @@
-/* body{
+body{
     background-image: url("/images/rotj.jpg");
-} */
-:root{
+}
+form{
+    max-width: 200px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+input{
+    display: block;
+    margin: 10px auto;
+    padding: 4px;
+}
+/* :root{
     background-color: #ecf5ff;
     font-size: 62.5%;
 }
@@ -84,4 +95,4 @@ h3{
 }
 .choice-text{
     padding: 1.5rem;
-}
+} */
