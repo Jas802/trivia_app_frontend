@@ -1,10 +1,27 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+const submitAnswers = document.getElementById('submitAnswers').style.display = "none";
+
 
 
 function showResults() {
+    const answerContainers = quizContainer.querySelectorAll('.answers');
 
+    let numCorrect = 0; //sets a variable for correct answers
+    allQuestions.forEach((currentQuestion, questionNumber) => {
+        const answerContainer = answerContainers[questionNumber];
+        const selector = `input[name=question${questionNumber}]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+        if(userAnswer === currentQuestion.correctAnswer){
+            numCorrect++;
+            answerContainers[questionNumber].style.color = 'lightgreen';
+        } else{
+            answerContainers[questionNumber].style.color = 'red';
+        }
+    })
+    resultsContainer.innerHTML = `You got ${numCorrect} out of ${allQuestions.length} `
 };
 
-submitButton.addEventListener('click', showResults);
+submitAnswers.addEventListener('click', showResults());

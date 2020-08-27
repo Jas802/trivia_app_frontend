@@ -1,3 +1,6 @@
+* {
+    font-family: "Crimson Text", serif;
+}
 body{
     background-image: url("/images/rotj.jpg");
 }
@@ -12,87 +15,26 @@ input{
     margin: 10px auto;
     padding: 4px;
 }
-/* :root{
-    background-color: #ecf5ff;
-    font-size: 62.5%;
-}
-*{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-h1,
-h2,
-h3,
-h4 {
-    font-size: 5.4rem;
-    color: #56a5eb;
-    margin-bottom: 1rem;
-}
-h1 > span {
-    font-size: 2.4rem;
-    font-weight: 500;
-}
-h2{
-    font-size: 4.2rem;
-    margin-bottom: 4rem;
-    font-weight: 700;
-}
-h3{
-    font-size: 2.8rem;
-    font-weight: 500;
-}
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80rem;
-    margin: 0 auto;
-}
-.container > *{
-    width: 100%;
-}
-.slide{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-.active-slide{
-    opacity: 1;
-    z-index: 2;
-}
-.quiz-container{
-    position: relative;
-    height: 200px;
-    margin-top: 40px;
-}
-.choice-container{
-    display: flex;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    font-size: 1.8rem;
-    border: 0.1rem solid rgb(86,165,235, 0.25);
-    background-color: white;
-}
-.choice-container:hover{
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
-}
-.choice-prefix{
-    padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
+button {
+    margin: 15px auto 0 auto;
+    display: block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    background: black;
     color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
-.choice-text{
-    padding: 1.5rem;
-} */
+
+button:hover {
+    color: black;
+    background: white;
+}
+.question{
+    color: FAEC04;
+}
+#results{
+    color: FAEC04;
+}
