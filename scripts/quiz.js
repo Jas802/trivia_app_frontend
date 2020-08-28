@@ -25,4 +25,4 @@ function showResults() {
 
 submitAnswers.addEventListener('click', showResults);
 
-//3rd call POST request submit answers
+//3rd call POST request high scores? 

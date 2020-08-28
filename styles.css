@@ -3,6 +3,8 @@
 }
 body{
     background-image: url("/images/rotj.jpg");
+    font-size: 20px;
+
 }
 form{
     max-width: 200px;
@@ -34,9 +36,18 @@ button:hover {
 }
 .question{
     color: #FAEC04;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 .answers{
     color: #FAEC04;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.answers label{
+    display: block;
+    margin-bottom: 10px;
 }
 #results{
     text-align: center;
