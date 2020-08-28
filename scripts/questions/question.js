@@ -24,19 +24,4 @@ const fetchQuestions = (questionBaseUrl) => { //fetches questions from URL
          createAnswers(questionObj, answers)
          allQuestions.push(questionObj)
      })
-     buildQuiz();
  }
- console.log(allQuestions, "logging questions");
-//  }.then((response) => { //gets question index from API
-//     console.log('resolved', response);
-//     return response.json();
-// }).then(data => {
-//     //console.log(data.data); // looks for the 'data' value of the json response
-//     questions = data.data.map(trivia => { // turns the 'data' value into an array using 'map'
-//         const question = new Question(trivia.title);   //creates new instance of Question class
-//         return question
-//     }); console.log(questions, "logging questions");
-// }).catch((err) => {
-//     console.log('rejected', err);
-// });
-

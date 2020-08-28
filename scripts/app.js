@@ -1,55 +1,28 @@
 
-// fetch('http://localhost:3000/api/v1/questions').then((response) => { //gets question index from API
-//     console.log('resolved', response);
-//     return response.json();
-// }).then(data => {
-//     //console.log(data.data); // looks for the 'data' value of the json response
-//     questions = data.data.map(trivia => { // turns the 'data' value into an array using 'map'
-//         const question = new Question(trivia.title);   //creates new instance of Question class
-//         return question
-//     }); console.log(questions, "logging questions");
-// }).catch((err) => {
-//     console.log('rejected', err);
-// });
-
-
-// fetch('http://localhost:3000/api/v1/answers').then((response) => { //gets answer index from API
-//     console.log('resolved', response);
-//     return response.json();
-// }).then(data => {
-//     //console.log(data.data);
-//     answers = data.data.map(record => {
-//         const answer = new Answer(record.response, record.question_id)
-//         return answer
-//     }); console.log(answers, "logging answers");
-// }).catch((err) => {
-//     console.log('rejected', err);
-// });
-
 function buildQuiz() {
     const output = [];
 
-    allQuestions.forEach((currentQuestion, questionNumber) => {
+    allQuestions.forEach((currentQuestion, questionNumber) => { //iterates over each question
         const choices = [];
-        for(response in currentQuestion.choices){
+        console.log(currentQuestion, "log1");
+        currentQuestion.answers.forEach((answer) => { //iterates over each answer
+            console.log(answer);
             choices.push(
                 `<label>
-                 <input type="radio" name="questions${questionNumber}" value=${response}>
-                 ${response} :
-                 ${question.answers[response]}
+                 <input type="radio" name="questions${questionNumber}" value=${answer.response}>
+                 ${answer.response}
                 <label>`
             );
-        }
+        });
         output.push(
-        `<div class="question"> ${currentQuestion.question} </div>
-        <div class="answers"> ${answers.join('')} </div>`
+        `<div class="question"> ${currentQuestion.title} </div>
+        <div class="answers"> ${choices.join('')} </div>`
         );
     });
     quizContainer.innerHTML = output.join('');
 };
 
 function showSubmit() {
-    console.log('function triggered!');
     if (submitAnswers.style.display === "none") {
         submitAnswers.style.display = "block";
     } else {
@@ -57,5 +30,3 @@ function showSubmit() {
     }
 };
 fetchQuestions(questionBaseUrl);
-// buildQuiz();
-

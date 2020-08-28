@@ -7,7 +7,7 @@ const users = [];
 const form = document.querySelector('.signup-form');
 const username = document.querySelector('#username');
 const feedback = document.querySelector('.feedback');
-const usernames = Object.assign({}, users);
+//const usernames = Object.assign({}, users);
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -17,9 +17,10 @@ form.addEventListener('submit', e => {
         alert("Choose a name, young Padawan") //name field must have text in order to play
     } else {
         feedback.textContent = "May The Force Be With You!";
-        users.push(username);
+        const user = new User(username)
+        users.push(user);
         showSubmit();
         buildQuiz();
     }
+    console.log(users, "logging users");
 });
-console.log(usernames, "logging users");
