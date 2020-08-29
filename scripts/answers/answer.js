@@ -3,6 +3,7 @@ class Answer {
         this.id = answer.id
         this.response = answer.attributes.response;
         this.question_id = answer.relationships.question.data.id;
+        this.correct_answer = answer.attributes.correct_answer;
     }
 }
 let answers = [];

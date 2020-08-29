@@ -10,19 +10,26 @@ function showResults() {
     let numCorrect = 0; //sets a variable for correct answers
     allQuestions.forEach((currentQuestion, questionNumber) => {
         const answerContainer = answerContainers[questionNumber];
-        const selector = `input[name=question${questionNumber}]:checked`;
-        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        const radios = document.getElementsByName(questionNumber +1);
+        var userAnswerIndex = null;
+        for(var i = 0; i < radios.length; i++) {
+            var id = radios[i].id;
+            var query = `label[for="${radios[i].id}"]`;
+            var label = document.querySelector(query);
+            if(radios[i].checked === true){
+                userAnswerIndex = i;
+            }
+            if(currentQuestion.answers[i].correct_answer){
+                label.style.color = 'lightgreen'; //highlights correct answers;
+            } else {
+                label.style.color = 'red'; //changes incorrect answers to red
+            }
+        }
 
-        if(userAnswer === currentQuestion.correctAnswer){
+        if(userAnswerIndex !=null && true === currentQuestion.answers[userAnswerIndex].correct_answer){
             numCorrect++;
-            answerContainers[questionNumber].style.color = 'lightgreen'; //highlights correct answers
-        }else{
-            answerContainers[questionNumber].style.color = 'red'; //changes incorrect answers to red
         }
     })
     resultsContainer.innerHTML = `You got ${numCorrect} out of ${allQuestions.length}`
 };
-
 submitAnswers.addEventListener('click', showResults);
-
-//3rd call POST request high scores? 

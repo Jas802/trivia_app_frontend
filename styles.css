@@ -1,10 +1,15 @@
-* {
+@import
+url(https://fonts.googleapis.com/css?
+family=Work+Sans:300,600);
+/* * {
     font-family: "Crimson Text", serif;
-}
+} */
 body{
     background-image: url("/images/rotj.jpg");
     font-size: 20px;
-
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
 }
 form{
     max-width: 200px;
@@ -12,9 +17,12 @@ form{
     background: white;
     padding: 10px;
 }
+h1{
+    color: red;
+}
 input{
-    display: block;
-    margin: 10px auto;
+    display: inline-block;
+    
     padding: 4px;
 }
 button {
@@ -43,11 +51,12 @@ button:hover {
 .answers{
     color: #FAEC04;
     margin-bottom: 20px;
-    text-align: left;
+    /* text-align: left; */
+    margin: 10px auto;
 }
 .answers label{
-    display: block;
-    margin-bottom: 10px;
+    display: inline-block;
+    /* margin-bottom: 10px; */
 }
 #results{
     text-align: center;
