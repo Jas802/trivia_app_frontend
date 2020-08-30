@@ -5,6 +5,7 @@ const submitAnswers = document.getElementById('submitAnswers')
 submitAnswers.style.display = "none";
 const restartButton = document.getElementById('restartQuiz');
 restartButton.style.display = "none";
+const commentButton = document.getElementById('postComment');
 
 function showResults() {
     const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -14,11 +15,11 @@ function showResults() {
         const answerContainer = answerContainers[questionNumber];
         const radios = document.getElementsByName(questionNumber +1);
         var userAnswerIndex = null;
-        for(var i = 0; i < radios.length; i++) {
+        for(var i = 0; i < radios.length; i++) { //loops over the amount of radio button/answers
             var id = radios[i].id;
             var query = `label[for="${radios[i].id}"]`;
             var label = document.querySelector(query);
-            if(radios[i].checked === true){
+            if(radios[i].checked === true){ // checks if checked answer is correct answer
                 userAnswerIndex = i;
             }
             if(currentQuestion.answers[i].correct_answer){
@@ -28,8 +29,8 @@ function showResults() {
             }
         }
 
-        if(userAnswerIndex !=null && true === currentQuestion.answers[userAnswerIndex].correct_answer){
-            numCorrect++;
+        if(userAnswerIndex !=null && true === currentQuestion.answers[userAnswerIndex].correct_answer){ 
+            numCorrect++; //increases scorec count
         }
     })
     resultsContainer.innerHTML = `You got ${numCorrect} out of ${allQuestions.length}`
@@ -38,7 +39,6 @@ function showResults() {
 function playAgain() {
     console.log("clicked reset");
     location.reload();
-    //buildQuiz();
 };
 
 function showRestart() {
