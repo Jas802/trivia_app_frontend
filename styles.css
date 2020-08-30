@@ -64,6 +64,7 @@ button:hover {
 .comments-container{
     justify-content: center;
     align-items: center;
+    margin: 10px auto;
     width: 600px;
     border: 2px solid #333;
     padding: 15px 10px;
@@ -72,6 +73,12 @@ button:hover {
     text-align: center;
     color: royalblue;
     margin-bottom: 15px;
+}
+.comments-container li{
+    background-color: whitesmoke;
+}
+.comments-container ul{
+    list-style: none;
 }
 textarea{
     height: 20px;
