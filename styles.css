@@ -24,7 +24,7 @@ input{
     display: inline-block;
     padding: 4px;
 }
-button {
+#postComment, #submitAnswers {
     margin: 15px auto 0 auto;
     display: block;
     padding: 5px 15px;
@@ -82,8 +82,9 @@ textarea{
     margin-bottom: 10px;
     resize: none;
     outline: none;
+    transition: .5s;
 }
-input[value="comment"], button
+input[value="comment"]
 {
     padding: 10px 15px;
     border: none;
@@ -97,7 +98,7 @@ input[value="comment"]
 {
     color: #fff;
     background-color: #273c75;
-    
+
 }
 #cancelButton{
     padding: 10px 15px;
@@ -107,4 +108,7 @@ input[value="comment"]
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+}
+.btn{
+    display: none;
 }
