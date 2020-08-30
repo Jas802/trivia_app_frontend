@@ -21,12 +21,12 @@ fetch(commentBaseUrl, {
       com.renderComment();
   })
 
-renderComment() {
-    let commentsDiv = document.getElementById("comments-container");
-    commentsDiv.innerHTML +=
-        `<div id="comments-container">
-            <ul>
-                <li> ${this.content} </li>
-            </ul>
-        </div>`
-};
+// renderComment() {
+//     let commentsDiv = document.getElementById("comments-container");
+//     commentsDiv.innerHTML +=
+//         `<div id="comments-container">
+//             <ul>
+//                 <li> ${this.content} </li>
+//             </ul>
+//         </div>`
+// };
