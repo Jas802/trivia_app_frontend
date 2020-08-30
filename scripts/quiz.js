@@ -3,6 +3,8 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const submitAnswers = document.getElementById('submitAnswers')
 submitAnswers.style.display = "none";
+const restartButton = document.getElementById('restartQuiz');
+restartButton.style.display = "none";
 
 function showResults() {
     const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -32,4 +34,22 @@ function showResults() {
     })
     resultsContainer.innerHTML = `You got ${numCorrect} out of ${allQuestions.length}`
 };
+
+function playAgain() {
+    console.log("clicked reset");
+    location.reload();
+    //buildQuiz();
+};
+
+function showRestart() {
+    if (restartButton.style.display === "none") {
+        restartButton.style.display = "block";
+    } else {
+        restartButton.style.display = "none";
+    }
+};
+
+
 submitAnswers.addEventListener('click', showResults);
+submitAnswers.addEventListener('click', showRestart);
+restartButton.addEventListener('click', playAgain);
