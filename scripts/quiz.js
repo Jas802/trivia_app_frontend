@@ -30,14 +30,13 @@ function showResults() {
         }
 
         if(userAnswerIndex !=null && true === currentQuestion.answers[userAnswerIndex].correct_answer){ 
-            numCorrect++; //increases scorec count
+            numCorrect++; //increases score count
         }
     })
     resultsContainer.innerHTML = `You got ${numCorrect} out of ${allQuestions.length}`
 };
 
 function playAgain() {
-    console.log("clicked reset");
     location.reload();
 };
 

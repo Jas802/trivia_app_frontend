@@ -54,10 +54,10 @@ fetch(commentBaseUrl, {
   })
 
  function renderComment(c) {
-    let commentsUl = document.querySelector('#commentsList > ul');
+    let commentsUl = document.querySelector('#commentsList > ul'); //querys the comments list
     let commentLi = document.createElement('li');
     commentLi.textContent = c.content;
-    commentsUl.appendChild(commentLi);
+    commentsUl.appendChild(commentLi); //adds comment to list
 };
     
 };

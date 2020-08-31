@@ -11,6 +11,6 @@ let answers = [];
 const createAnswers = (question, answers) => {
     answers.forEach((answer) => {
         let answerObj = new Answer(answer)
-        question.answers.push(answerObj)
+        question.answers.push(answerObj) //pushes into the this.answers array in Question class
     });
 }

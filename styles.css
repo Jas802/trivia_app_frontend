@@ -1,9 +1,6 @@
 @import
 url(https://fonts.googleapis.com/css?
 family=Work+Sans:300,600);
-/* * {
-    font-family: "Crimson Text", serif;
-} */
 body{
     background-image: url("/images/rotj.jpg");
     font-size: 20px;
@@ -17,14 +14,11 @@ form{
     background: white;
     padding: 10px;
 }
-h1{
-    color: red;
-}
 input{
     display: inline-block;
     padding: 4px;
 }
-#postComment, #submitAnswers {
+#restartQuiz, #submitAnswers {
     margin: 15px auto 0 auto;
     display: block;
     padding: 5px 15px;

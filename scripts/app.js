@@ -4,13 +4,11 @@ function buildQuiz() {
     
     allQuestions.forEach((currentQuestion, questionNumber) => { //iterates over each question
         const choices = [];
-        //console.log(currentQuestion, "log1");
         currentQuestion.answers.forEach((answer, index) => { //iterates over each answer
             console.log(answer);
             choices.push(
                 `<label for="${answer.id}">${answer.response}</label>
                  <input type="radio" id="${answer.id}" name="${answer.question_id}" value=${index}>`
-                 //${answer.response}
                  
             );
         });
